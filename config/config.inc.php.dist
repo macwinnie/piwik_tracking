@@ -1,0 +1,37 @@
+<?php
+
+/* piwik site id */
+$rcmail_config['piwik_tracking_id'] = null;
+
+/* domain of your piwik installation */
+$rcmail_config['piwik_tracking_domain'] = null;
+
+/* exclude private pages - analytics will works only for non-logged users */
+$rcmail_config['piwik_tracking_privacy'] = FALSE;
+
+/* exclude the following templates */
+$rcmail_config['piwik_tracking_exclude'] = array(
+);
+
+//  Possible templates:
+
+//  "message",
+//  "messagepart",
+//  "messagepreview",
+//  "messageerror",
+//  "showcontact",
+//  "addcontact",
+//  "editcontact",
+//  "importcontacts",
+//  "addressbook",
+//  "compose",
+//  "editidentity",
+//  "error",
+//  "identities",
+//  "login",
+//  "mail",
+//  "managefolders",
+//  "plugin",
+//  "settingsedit",
+//  "settings"
+	
