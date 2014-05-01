@@ -20,7 +20,7 @@ class piwik_tracking extends rcube_plugin {
 
     function add_script ($args) {
         $rcmail = rcmail::get_instance();
-        $exclude = array_flip($rcmail->config->get('piwik_analytics_exclude'));
+        $exclude = array_flip($rcmail->config->get('piwik_tracking_exclude'));
         
         if (isset($exclude[$args['template']]))
             return $args;
@@ -44,7 +44,7 @@ class piwik_tracking extends rcube_plugin {
     g.defer=true; g.async=true; g.src=u+\'piwik.js\'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="http://' . $rcmail->config->get('piwik_analytics_domain') . '/piwik.php?idsite=' . $rcmail->config->get('piwik_tracking_id') . '" style="border:0;" alt="" /></p></noscript>
+<noscript><p><img src="http://' . $rcmail->config->get('piwik_tracking_domain') . '/piwik.php?idsite=' . $rcmail->config->get('piwik_tracking_id') . '" style="border:0;" alt="" /></p></noscript>
 <!-- End Piwik Code -->
 ';
         // add script to end of page
